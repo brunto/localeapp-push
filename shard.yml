@@ -1,0 +1,11 @@
+name: localeapp-push
+version: 0.1.0
+
+authors:
+  - Bruno Perles <bruno@atnos.com>
+
+dependencies:
+  progress:
+    github: askn/progress
+
+license: MIT
