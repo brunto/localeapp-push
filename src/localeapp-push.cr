@@ -17,11 +17,12 @@ module Localeapp::Push
   dir = File.join(ARGV[0], "*")
   files = Dir[dir]
   bar.total = files.size
-  
+
   files.each do |file|
+    print "#{file} "
     bar.inc
-    puts "\n"
-    puts `localeapp -k #{ARGV[1]} push #{file}`
+    `localeapp -k #{ARGV[1]} push #{file}`
     sleep 1.5
+    STDOUT.flush
   end
 end
